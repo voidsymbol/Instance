@@ -210,7 +210,7 @@ export default mixed class* Engine extends Instance {
     static try async let  worker = await pool.best();           // soft, reassignable
 
     static get health() { return net.ping(this.worker); }       // on demand, every access
-    static async get peers() { return await net.discover(); }   // accessors have no lane
+    static async get peers() { return net.discover(); }   // accessors have no lane
 
     // ================================================================
     // INSTANCE LANES — per element. Settles during construction.
