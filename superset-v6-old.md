@@ -1,4 +1,4 @@
-# Superset V6
+# Superset V6 - WIP
 
 Five parts.
 
@@ -4956,30 +4956,3 @@ identifiers, so a page that does not decode them as UTF-8 — no charset declare
 and none sent by the server — fails to parse them (measured: both break when read
 as windows-1252). Proposed: ASCII-only module sources, with `\u` escapes where a
 non-ASCII name is wanted.
-
-## Lanes: `latch` replaces `sync` (ADOPTED as `setup` — see C-LANES2X2; the table below used the working name)
-
-`latch` is the blocking lane. `sync` and its aliases (`synch`, `layer`, `vsync`,
-`bsync`) and `batch` become retiring aliases. A two-word lane reads left to
-right: the first word says how the run meets the constructor, the second how its
-lines meet each other.
-
-|              | lines in turn  | lines as they land |
-| ------------ | -------------- | ------------------ |
-| **joined**   | `latch`        | `latch async`      |
-| **detached** | `async latch`  | `async`            |
-
-`latch async` is the old `batch`: the run starts together, each value is written
-as it lands, and the run joins at the lane change. `async latch` is the old
-`async sync`, the background waterfall: detached, each line starting when the
-previous one lands. The two are inverses by construction — word order is
-meaning, so a transposed pair compiles, and this table is the rule that makes it
-learnable. `defer async` (the old `defer batch`) reads the same way: joined at
-the constructor's end, written as each lands. `memo` is unchanged: it holds
-writes to source order, and is a no-op where lines already go in turn.
-
-## Descriptors: `set` is the hidden strict constant (SUPERSEDED by C-SHADOW; `indexed` adopted alongside as memo's participle spelling)
-
-`set` was adopted as `const`'s alias, which failed Perl's Razor. It now differs:
-`const` is one value for the hierarchy, `set` one per class (C-SHADOW). `get` →
-`pin` is withdrawn: `pin` is the word that replaced `var` (C-PIN).
