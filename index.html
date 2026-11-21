@@ -135,6 +135,8 @@
                       color: #7fa6e0; }
     .aisummary h4 { color: #dfe8f7; margin-top: 10px; }
     .aisummary p { color: #c7d3e8; }
+    sup.fn a { color: var(--accent2); text-decoration: none; font-size: .75em; margin-left: 1px; }
+    p.footnote { font-size: 12.5px; color: var(--dim); margin-top: 14px; }
     .prerelease .fill { color: #ece2c8; }    /* the blank the reader fills in, brackets included: a shade paler than the box's text */
     pre .sc  { color: #5f6b78; font-style: italic; }   /* comment */
     /* what a block printed: a block of its own under it, its label in the flow (never laid over the text) */
@@ -5438,7 +5440,7 @@ console.log(made.outerHTML);</code></pre>
   <h2 id="legal">Legal</h2>
   <p class="lede">Instance is licensed under
   <a href="https://codeberg.org/voidsymbol/The-Fair-Source-License/src/branch/main/v1.1.md" target="_blank" rel="noopener">The Instance Satoshi License</a> (ISL): free for individuals and small
-  teams, paid for by the companies that profit from it. It is a Pushkarev Shield.</p>
+  teams, paid for by the companies that profit from it.<sup class="fn"><a href="#fn-required" id="fnref-required">1</a></sup> It is a Pushkarev Shield.</p>
   <h3 id="pushkarev">The Pushkarev Shield</h3>
   <p>In 2012 a developer named Denis Pushkarev started a library called core-js. It lets modern JavaScript run in older
   browsers, and it became one of the most-used pieces of code on the web: about nine billion downloads, a quarter of
@@ -5488,6 +5490,7 @@ console.log(made.outerHTML);</code></pre>
   billion-dollar company is ten dollars to someone with ten thousand; to a trillion-dollar company, one cent. Half of
   market valuation is the same share of everyone.</p>
   <p>This summary is not the licence; <a href="https://codeberg.org/voidsymbol/The-Fair-Source-License/src/branch/main/v1.1.md" target="_blank" rel="noopener">the licence</a> is.</p>
+  <p class="footnote" id="fn-required"><sup>1</sup> It's not wanted: it's required. <a href="#fnref-required">&#8617;</a></p>
 
   <h2 id="toolenv">Tooling</h2>
   <p class="lede">How Instance is loaded and configured: the attributes on its script tag, which tags get a class, how a tag's name
