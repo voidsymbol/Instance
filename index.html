@@ -778,6 +778,9 @@ console.log(a.textContent, '|', b.textContent);</code></pre>
   marked, as reported in November 2026; they move.</p>
   <div class="tw"><table class="params prose">
     <tr><th>Replaced</th><th>What it does</th><th>Why Instance replaces it</th><th>Valuation</th></tr>
+    <tr><td>React</td><td>The framework layer itself: a component tree reconciled against the DOM</td><td>The class is
+        the element; nothing to reconcile, wrap or hydrate. React is the reason Instance exists</td><td>No price &mdash;
+        open source; its value sits inside Meta</td></tr>
     <tr><td>Vercel</td><td>Next.js, and build-and-deploy hosting for React apps</td><td>No build step and no meta-framework:
         a page is a file any host serves. The hosting survives as a commodity; the reason to choose Vercel goes</td>
         <td>$9.3B (Series F, Sep 2025); secondary estimates $10&ndash;11.5B, Oct&ndash;Nov 2026</td></tr>
@@ -785,13 +788,13 @@ console.log(a.textContent, '|', b.textContent);</code></pre>
         pipeline</td><td>$2B (Series D, Nov 2021); secondary estimate $0.2B, Oct 2026</td></tr>
     <tr><td>VoidZero (Vite, Rolldown, Oxc)</td><td>The bundler toolchain</td><td>The compiler runs in the page; there is
         nothing to bundle</td><td>$81M (Series A, Oct 2025); joined Cloudflare, Jun 2026</td></tr>
-    <tr><td>React, Vue, Angular, Svelte, Solid</td><td>The framework layer itself</td><td>The class is the element; nothing
-        to reconcile, wrap or hydrate</td><td>No price &mdash; open source; React's value sits inside Meta, Angular's inside
-        Google</td></tr>
     <tr><td>Redux and the state libraries; CSS-in-JS; Tailwind's build step</td><td>State and styling tooling for the
         framework layer</td><td>Fields are state; a class styles itself with one adopted sheet</td><td>Open source /
         undisclosed</td></tr>
     <tr><th>Exposed</th><th>What it does</th><th>Why Instance undercuts it</th><th>Valuation</th></tr>
+    <tr><td>Vue, Angular, Svelte, Solid</td><td>The other frameworks: a proxy, a compiler or fine-grained signals, each still
+        holding the element behind a handle</td><td>Closer to the platform than React, but each keeps the layer Instance
+        removes; every one has to explain why</td><td>No price &mdash; open source; Angular's value sits inside Google</td></tr>
     <tr><td>Lovable</td><td>AI app builder; emits React and Next.js</td><td>Its moat is making React tolerable for
         non-developers; with AI writing Instance, the hard part it sells disappears. Could adopt Instance instead</td>
         <td>$13.3B (Series C, Aug 2026)</td></tr>
