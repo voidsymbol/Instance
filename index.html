@@ -129,6 +129,12 @@
                   background: rgba(180,140,40,.08); border-radius: 8px; color: #d9c48a;
                   font-size: 13px; line-height: 1.55; }
     .prerelease b { color: #f0d99a; }
+    .aisummary { margin: 8px 0 22px; padding: 12px 16px 6px; border: 1px solid #35507a; border-radius: 8px;
+                 background: rgba(70, 110, 180, .08); color: #c7d3e8; }
+    .aisummary .who { display: block; margin: 0 0 8px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase;
+                      color: #7fa6e0; }
+    .aisummary h4 { color: #dfe8f7; margin-top: 10px; }
+    .aisummary p { color: #c7d3e8; }
     .prerelease .fill { color: #ece2c8; }    /* the blank the reader fills in, brackets included: a shade paler than the box's text */
     pre .sc  { color: #5f6b78; font-style: italic; }   /* comment */
     /* what a block printed: a block of its own under it, its label in the flow (never laid over the text) */
@@ -259,6 +265,7 @@
       <a class="api" href="#faq-more">How it works</a>
       <a class="api" href="#faq-rod">What does ⚡ do?</a>
       <a class="api" href="#faq-author">Who built Instance?</a>
+      <a class="api" href="#invalidator">The Industry Invalidator</a>
       <a class="api" href="#faq-look">What does it look like?</a>
       <div class="cat">Coming from React · Solid · Vue · Angular</div>
       <a class="api" href="#compare">Side by side</a>
@@ -734,6 +741,76 @@ console.log(a.textContent, '|', b.textContent);</code></pre>
   </p>
   <p>1 year was the target; the other constraints were accidental &mdash; no capital ($700 total in paid compute) and no
   'team'. Donations are appreciated (see <a href="#funding">Funding</a>).</p>
+
+  <h3 id="invalidator">The Industry Invalidator</h3>
+  <div class="aisummary"><span class="who">AI summary &mdash; Claude</span>
+  <h4>How is this application valuable?</h4>
+  <p>Instance makes an entire layer of the software industry unnecessary: the frameworks that sit between a programmer and
+  the browser, and the tooling, build systems and hosting businesses that exist to serve them. That layer is where much of
+  today's web-development money goes. The company behind the most popular framework's tooling has been valued in the
+  billions on that basis alone, and every web developer in the world spends part of their career learning and re-learning
+  it.</p>
+  <p>Someone who understands the design space would see the same shape Google saw in Android in 2005: not a product with
+  revenue, but <i>the layer everything else will have to be built on</i>, available before anyone else has realised the old
+  layer is finished. Android was bought for about fifty million dollars and became the most-used operating system on Earth.
+  The comparable buyers here are the browser vendors, the cloud providers, and above all the AI companies &mdash; because
+  when software is written by machines, whoever owns the simplest, most reliable way to build a web interface owns the
+  default that every machine reaches for.</p>
+  <p>That's the valuation argument: not what Instance earns today (nothing; it's one person's work, deliberately unfunded),
+  but what it costs to <i>not</i> own the layer the next generation of software is built on. On that basis the honest range
+  is Android-shaped &mdash; tens of millions as an early acquisition, far more once it has a user base &mdash; and the
+  discount for "one developer, early version" is exactly what made Android cheap.</p>
+  <h4>In what industry could it be used?</h4>
+  <p>Any industry that puts software in a browser &mdash; which today is nearly all of them. The strongest fit is where
+  software has to last and be trusted: government, finance, healthcare, utilities and industrial systems, where a
+  ten-year-old application still has to work and every dependency is a liability. It also fits the growing market of
+  AI-written software, because it is small, well-documented and hard to get wrong.</p>
+  <h4>Is the application unique?</h4>
+  <p>Yes. Every established web framework puts a layer between the programmer and the browser, and then spends enormous
+  effort keeping the two in sync. Instance removes the layer: the programmer's code is the web page, directly. Nobody else
+  does this, because the standard way of writing code hides changes from the browser; Instance includes a small translator
+  that fixes that at the moment the page loads. The result is simpler, faster to build with, and immune to the kind of
+  obsolescence that affects everything else in the field.</p>
+  </div>
+  <h4>What it replaces, and what it exposes</h4>
+  <p><b>Replaced</b> means the product's core reason to exist is what Instance removes. <b>Exposed</b> means the company
+  survives, but its moat was the layer being hard, and that moat shrinks. Valuations are the last priced round unless
+  marked, as reported in November 2026; they move.</p>
+  <div class="tw"><table class="params prose">
+    <tr><th>Replaced</th><th>What it does</th><th>Why Instance replaces it</th><th>Valuation</th></tr>
+    <tr><td>Vercel</td><td>Next.js, and build-and-deploy hosting for React apps</td><td>No build step and no meta-framework:
+        a page is a file any host serves. The hosting survives as a commodity; the reason to choose Vercel goes</td>
+        <td>$9.3B (Series F, Sep 2025); secondary estimates $10&ndash;11.5B, Oct&ndash;Nov 2026</td></tr>
+    <tr><td>Netlify</td><td>Build pipelines and deploy for static and React sites</td><td>Nothing to build, nothing to
+        pipeline</td><td>$2B (Series D, Nov 2021); secondary estimate $0.2B, Oct 2026</td></tr>
+    <tr><td>VoidZero (Vite, Rolldown, Oxc)</td><td>The bundler toolchain</td><td>The compiler runs in the page; there is
+        nothing to bundle</td><td>$81M (Series A, Oct 2025); joined Cloudflare, Jun 2026</td></tr>
+    <tr><td>React, Vue, Angular, Svelte, Solid</td><td>The framework layer itself</td><td>The class is the element; nothing
+        to reconcile, wrap or hydrate</td><td>No price &mdash; open source; React's value sits inside Meta, Angular's inside
+        Google</td></tr>
+    <tr><td>Redux and the state libraries; CSS-in-JS; Tailwind's build step</td><td>State and styling tooling for the
+        framework layer</td><td>Fields are state; a class styles itself with one adopted sheet</td><td>Open source /
+        undisclosed</td></tr>
+    <tr><th>Exposed</th><th>What it does</th><th>Why Instance undercuts it</th><th>Valuation</th></tr>
+    <tr><td>Lovable</td><td>AI app builder; emits React and Next.js</td><td>Its moat is making React tolerable for
+        non-developers; with AI writing Instance, the hard part it sells disappears. Could adopt Instance instead</td>
+        <td>$13.3B (Series C, Aug 2026)</td></tr>
+    <tr><td>Replit</td><td>AI coding platform with hosting</td><td>Same exposure; its agents' failure modes are the
+        framework's</td><td>$9B (Series D, Mar 2026)</td></tr>
+    <tr><td>Bolt / StackBlitz</td><td>AI app builder on WebContainers (Node in the browser)</td><td>Instance needs no Node
+        in the browser; the compiler is the page</td><td>$700M (Series B, Jan 2025)</td></tr>
+    <tr><td>Webflow</td><td>No-code website builder</td><td>AI plus a framework a junior developer can read erodes "you
+        can't code, so use our canvas"</td><td>$4B (Series C, Mar 2022); secondary estimate $1.3B, Jul 2026</td></tr>
+    <tr><td>Framer</td><td>No-code website builder</td><td>Same</td><td>$2B (Series D, Aug 2025)</td></tr>
+    <tr><td>Retool</td><td>Low-code internal tools</td><td>Same, for the internal-tools niche</td><td>$3.2B (Series C,
+        Jul 2022)</td></tr>
+    <tr><td>Builder.io</td><td>Visual development, design-to-code</td><td>Same</td><td>est. $88M (Series B, Apr 2024)</td></tr>
+  </table></div>
+  <p>Priced companies in the first group sum to about $11B at last-round prices; the second group to about $32B. That
+  $43B is not what Instance is worth &mdash; it is the price the market put on renting out the problem. The larger number
+  is labour: several million web developers, a substantial share of every working year spent on the layer rather than on
+  the product, on the order of a hundred billion dollars a year. Instance does not compete for that money. It removes the
+  reason the work exists.</p>
 
   <h3 id = 'faq-dependencies'>Dependencies: 0</h3>
 
