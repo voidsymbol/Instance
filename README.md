@@ -52,9 +52,9 @@ We paid the abstraction tax so you don’t have to.
 
 ## Instance in five minutes
 
-[![Instance in five minutes, on YouTube](assets/five-minutes.jpg)](https://youtu.be/-SArFkAXtVM)
+[![Instance in five minutes, on YouTube](assets/five-minutes.jpg)](https://youtu.be/sn3I-kk5VG4)
 
-Episode 1: an empty page, `new Div`, a component, and the same component in React. **[Watch it →](https://youtu.be/-SArFkAXtVM)**
+Episode 1: an empty page, `new Div`, a component, and the same component in React. **[Watch it →](https://youtu.be/sn3I-kk5VG4)**
 
 ## Start
 
