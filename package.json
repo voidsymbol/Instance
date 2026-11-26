@@ -1,0 +1,44 @@
+{
+  "name": "@instance-js/instance",
+  "version": "0.92.17",
+  "description": "Instance is a JavaScript UEFI that requires no build step: new Div('@#target');",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": "voidsymbol",
+  "homepage": "https://voidsymbol.github.io/Instance/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voidsymbol/Instance.git"
+  },
+  "bugs": {
+    "url": "https://github.com/voidsymbol/Instance/issues"
+  },
+  "keywords": [
+    "instance",
+    "dom",
+    "elements",
+    "reactive",
+    "signals",
+    "superset",
+    "no-build",
+    "web"
+  ],
+  "main": "Instance-core-0.92.h.js",
+  "exports": {
+    ".": "./Instance-core-0.92.h.js",
+    "./core": "./Instance-core-0.92.h.js",
+    "./full": "./Instance-0.92.h.js",
+    "./package.json": "./package.json"
+  },
+  "jsdelivr": "Instance-0.92.h.js",
+  "unpkg": "Instance-0.92.h.js",
+  "sideEffects": true,
+  "files": [
+    "Instance-0.92.h.js",
+    "Instance-core-0.92.h.js",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
